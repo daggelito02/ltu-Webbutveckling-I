@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="sv">
+    <head>
+        <meta charset="utf-8">
+        <!-- 1. Titel på webbsidan, Titeltexen visas som en flik i 
+             webbläsaren och bokmärksnamnet. 
+             Viktig för SEO(sökmotoroptimering) -->
+        <title>Uppgift 2a - Enkla webbsidor</title>
+        <style>
+            /* border, width och cellpadding attributen för tabell är utfasad, där av CSS */
+            table, th, td  {
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+            table {
+                width: 500px;
+            }
+            th, td {
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body style="margin: 2rem;">
+        <!-- 2. Rubrik-taggar (Headings) är vad namnet beskriver. 
+            1 är störst och 6 är minst.
+            Hierarkin är är viktig för navigeringen, speciellt för "screensreaders" 
+            det bör bara finnas en h1 per sidan men i HTML5 kan även varje 
+            <section> och <article> och några andra element (se dokumentation) ha en h1 som då blir en isolerard 
+            huvudrubrik för sektionen/artiklen. De övriga får förekomma efter behov -->
+        <h1>Uppgift 2a - Enkla webbsidor</h1>
+        <h2>Presentation om mig själv</h2>
+        <!-- 3. Paragraf-tecknet definierar ett text-stycke -->
+        <p>
+            Dag Fredriksson är mitt namn och denna termin läser jag Webbutveckling-I.
+        </p>
+        <p>
+            Jag är i övre medelåldern, har en flickvän och är pappa till en 23-åring. Jag  bor i Stockholm.<br>
+            Att löpträna och gymma är något som jag lägger lite tid på och ett annat intresse är att fotografera.<br>
+            Träffa släkt eller vänner över en vällagad middag uppskattas högt. Det är ett trevligt och socialt sätt att fylla på energidepåerna.<br>
+            Jag gillar även att vidga mina vyer, så när det går att klämma in en resa, är det på sin plats. Särskilt en fotoresa.
+        </p>
+        <p>
+            Att utbilda sig som vuxen är väldigt roligt och mycket mer motiverande än när jag var ung.<br>
+            En stor skillnad är väl att man själv väljer vad man vill läsa och så är det ju oxå frivilligt :-).
+        </p>
+
+        <p>Ja det var lite om mig själv. Hoppas denna bild nedan kan stämma med beskrivningen av mig.</p>
+        <figure>
+            <!-- 5. Denna tagg används för att lägga in bilder till sin sida. -->
+            <img src="dagge-avatar.jpg" alt="Porträtt av Dag Fredriksson" width="200" title="Dag Fredriksson tagen framifrån">
+            <figcaption>Dag Fredriksson</figcaption>
+        </figure>
+        <br>
+        <h3>Vad fyller man en tabell med?</h3>
+        <p>
+            Att strukturera sitt presentationsdata kan vara knepigt med HTML och ett vanligt <br>
+            misstag kan vara att välja ett html-element för att få saker att ligga visuellt rätt. <br>
+            Tabell elementet
+            <!-- 6. Strong används föt att ge texten fet stil, detta för att betona ord eller meningar. 
+            Taggen har en viss vikt för att visa skärmläsare och sökmotorer att något är viktigt. -->
+            <strong>
+             <!-- 7. EM används för att betona texten och visas visuellt kursivt. Texten får även 
+            en semantisk betydelse och skärmläsare kan till exempel använda denna tagg för att 
+            läsa med betoning. -->
+            &lt;<em>table</em>&gt;</strong> kan vara ett bra exempel på när html-element används semantiskt fel.<br>
+            Iställlet för att presentera tabell-data så använsds tabellen istället för att göra en layout-presentation.<br>
+            Detta var väldigt vanligt i htmls barndom innan CSS gjorde sitt intåg.
+        </p>
+        
+        <!-- 8. Vill man visa data som en tabell är denna tagg-grupp helt rätt att anvävda sig av. 
+            Tabellen visar data i kolumner och rader, typ som Excel -->
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="2">
+                        Information om Dag Fredriksson
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Födelseort</td>
+                    <td>Stockholm</td>
+                </tr>
+                <tr>
+                    <td>Syskon</td>
+                    <td>Två bröder</td>
+                </tr>
+                <tr>
+                    <td>Barn</td>
+                    <td>Ja ett</td>
+                </tr>
+                <tr>
+                    <td>Husdjur</td>
+                    <td>Katt</td>
+                </tr>
+                <tr>
+                    <td>Körkort</td>
+                    <td>Ja</td>
+                </tr>
+                <tr>
+                    <td>Bostad</td>
+                    <td>Lägenhet</td>
+                </tr>
+                <tr>
+                    <td>Språk</td>
+                    <td>Engelska, lite Makedonska och Italienska</td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <h2>Min blandade länklista:</h2>
+        <!-- 9. Den osorterande list-taggen ul (unordered list) är en osorterad lista
+        till skillnad från ol (ordered list) som till exempel kan vara en numrerad lista. -->
+        <ul>
+            <li>
+                <p>
+                    <!-- 4. Med a-taggen skapar du länkar (hyperlänkar) där man kan 
+                        navigera till olika delar av webbplatsen eller till 
+                        andra webbplatser. Bokstaven a står för anchor (ankare) -->
+                    <a href="https://www.instagram.com/dongiornopics/" target="_blank">
+                        Mitt fotokonto på Instagram (öppnas i nytt fönster)
+                    </a>
+                </p>
+            </li>
+            <li>
+                <p>
+                    <a href="https://www.instagram.com/accidentallywesanderson/?hl=sv" target="_blank">
+                        Folk som av misstag tagit foton med Wes Anderson-stil. (öppnas i nytt fönster)
+                    </a>
+                </p>
+            </li>
+            <li>
+                <p>
+                    <a href="https://eventphoto.se/" target="_blank">
+                        Eventphoto (öppnas i nytt fönster)
+                    </a>
+                </p>
+            </li>
+            <li>
+                <p>
+                    <a href="https://stockholm.fotografiska.com/sv" target="_blank">
+                        Fotografiska (öppnas i nytt fönster)
+                    </a>
+                </p>
+            </li>
+            <li>
+                <p>
+                    <a href="https://poweryoga.com/" target="_blank">
+                        Poweryoga (öppnas i nytt fönster)
+                    </a>
+                </p>
+            </li>
+            <li>
+                <p>
+                    <a href="https://runacademy.se/" target="_blank">
+                        Runacademy (öppnas i nytt fönster)
+                    </a>
+                </p>
+            </li>
+            <li>
+                <p>
+                    <a href="https://www.friskissvettis.se/stockholm/" target="_blank">
+                        Friskissvettis (öppnas i nytt fönster)
+                    </a>
+                </p>
+            </li>
+        </ul>
+        <br>
+        <h2>Analys av uppgift 1a.</h2>
+        <p>
+            <a href="analys.html">
+                Till analysen &#187;
+            </a>
+        </p>
+        <br>
+
+    </body>
+</html>
