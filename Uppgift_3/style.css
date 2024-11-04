@@ -9,49 +9,52 @@ Länken ska ändra färg/bakgrundsfärg när man drar muspekaren över den (:hov
 Du ska använda dig både klasser och id i mallen. */
 
 body {
-    font-family: Candara, Verdana, sans-serif;
+    font-family: Candara, Verdana, sans-serif; /* ltu.html siadans default font-familj */
     margin: 2rem;
 }
 h1, h2, h3, h4, h5, h6 {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif; /* Font-familjen för alla h-taggar */
 }
-.lista{
-    list-style-type: none;
-}
-.tabell1, .tabell2 {
+.lista {
+    list-style-type: none; /* Gör en lista utan stiltyp, rader har bara texten */
+} 
+/* Lägger till 1 rem (16px) luft i tabbellen mellan text och yttre tabellväggar och 1 px svart ram */
+.tabell1, .tabell2 { 
     padding: 1rem;
     border: solid 1px #333;
 }
-tbody tr:first-child td {
+tbody tr:first-child td { /* Sätter en halv rem luft i toppen av första radens tabellcell */
     padding-top: .5rem;
 }
-th {
+th { /* Flyttar texten till vänster istället för centrerad samt en ram-linje i botten av tabellhuvudcellen */
     text-align: left;
     border-bottom: solid 1px #333;
 }
-caption {
+caption { /* Flyttar texten till vänster istället för centrerad samt fetat texten */
     text-align: left;
     font-weight: 600;
 }
-.tabell1 {
+.tabell1 { /* Sätter en rosaaktig bakgrund */
     background-color: #ffcccc;
 }
-.tabell1 td:first-child{
+.tabell1 tr td:first-child { /* Luft till höger om alla raders första tabellcell i Tabell 1  */
     padding-right: 1rem;
 }
-.tabell2 {
+.tabell2 { /* Sätter en orangeaktig bakgrund */
     background-color: #ffcc99;
 }
-.foot {
+.foot { /* Alla med classen foot får en gråaktig text med svart bakgrund och snedställd text */
     color: #aaa;
     background-color: #000;
     font-style: italic;
 }
-#source {
+#source { /* Denna ID-reference har css-egenskaperna högerställld text och grön färg */
     color: #009900;
     text-align: right;
 }
-#source a:hover {
+/* a-taggar som ligger med denna ID-reference kontainer 
+får grå bakgrund och vit text vid hover-tillståndet */
+#source a:hover { 
     color: #fff;
     background-color: #888;
 }
