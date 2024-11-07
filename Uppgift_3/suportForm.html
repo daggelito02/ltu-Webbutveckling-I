@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="sv">
+	<head>
+		<meta charset="utf-8">	
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Supportformulär</title>
+		<link rel="stylesheet" href="form.css">
+	</head>
+	<body>
+        <h1>Supportformulär</h1>
+        <p>
+            Här kan du skicka ett ärende till vår supportavdelning.
+        </p>
+        <!-- Formuläret går till web-addressen  
+        https://swplayground.ltu.se/resources/parse_form.php
+        Med metoden post skickar man datat bakom kulisserna :-) till skidnad
+        mot get-metoden som skickar datat som en parameter i url:en. Med post-metoden 
+        kan man skicka typ obegrännsat med data och det över HTTPS protokollet
+        vilket gör denna metod säkrare. -->
+        <form action="https://swplayground.ltu.se/resources/parse_form.php" method="post">
+            <div class="form-raw">
+                <!-- Med label-taggen koplar man ihop sin form-tag genom attributet "for"
+                och id attributet på form-taggen. -->
+                <label for="name">Ditt namn</label>
+                <input type="text" id="name" name="namn">
+            </div>
+            <div class="form-raw">
+                <label for="telefon">Telefon</label>
+                <input type="text" id="telefon" name="telefon">
+            </div>
+            <div class="form-raw">
+                <label for="prioritet">Prioritet</label>
+                <!-- Med taggen select skapar du en dropdown-lista där varje option-tagg
+                blir de val som finns i listan. Default är select en "single select" där 
+                man väljet ett av valen presis som med radio-knappar -->
+                <select name="prioritet" id="prioritet">
+                    <option value="1">Låg</option>
+                    <option value="2">Normal</option>
+                    <option value="3">Hög</option>
+                </select>
+            </div> 
+            <div class="form-raw radio">
+                <label>Tilldela till ort</label>
+                <!-- Hä kommer en lista me radioknapper. Man håller ihop listan med 
+                att ange samma namn på namn-attributet -->
+                <div>
+                    <input type="radio" id="gbg" name="ort" value="gbg">
+                    <label for="gbg">Göteborg</label>
+                </div>
+                <div>
+                    <input type="radio" id="sthlm" name="ort" value="sthlm">
+                    <label for="sthlm">Stockholm</label>
+                </div>
+                <div>
+                    <input type="radio" id="ume" name="ort" value="ume">
+                    <label for="ume">Umeå</label>
+                </div>
+                <div>
+                    <input type="radio" id="lule" name="ort" value="lule">
+                    <label for="lule">Luleå</label>
+                </div>
+            </div>
+            <div class="form-raw">
+                <label for="kategori">Kategorin</label>
+                <select name="kategori" id="kategori">
+                    <option value="fakt">Fakturering</option>
+                    <option value="net">Internet</option>
+                    <option value="tel">Telefoni</option>
+                    <option value="epost">E-post</option>
+                </select>
+            </div>
+            <div class="form-raw">
+                <label for="rubrik">Rubrik</label>
+                <input type="text" id="rubrik" name="rubrik">
+            </div>
+            <div class="form-raw">
+                <!-- Vill man skriva lite längre texter än <input type="text"> elementet använder man sig av textarea-taggen.
+                Med cols atributet anger man kolumner och med rows atributet anger man rader -->
+                <label for="beskrivning">Beskrivning</label>
+                <textarea id="beskrivning" cols="30" rows="10" name="beskrivning"></textarea>
+            </div> 
+            <div class="form-raw">
+                <!-- Input-typen Submit är själva skickaknappen och reset är en knapp som tömmer 
+                formuläret men eventuellt data som men fyllt i. -->
+                <input type="submit" value="Submit" name="skicka">
+                <input type="reset" value="Reset">
+            </div> 
+        </form>
+	</body>
+</html>

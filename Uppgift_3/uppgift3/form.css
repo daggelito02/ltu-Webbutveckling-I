@@ -1,0 +1,10 @@
+body {
+    font-family: Candara, Verdana, sans-serif; /* ltu.html siadans default font-familj */
+    margin: 2rem;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: Arial, Helvetica, sans-serif; /* Font-familjen för alla h-taggar */
+}
+label {
+    display: block;
+}

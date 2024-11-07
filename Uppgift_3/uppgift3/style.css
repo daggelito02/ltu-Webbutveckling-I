@@ -1,0 +1,60 @@
+/* Skriv en extern stilmall som innehåller följande regler:
+
+För elementen h1-h6 används typsnitt Arial, Helvetica, sans-serif.
+För övrig text används typsnitt Candara, Verdana, sans-serif
+Tabell1: bakgrundsfärg #ffcccc
+Tabell2: bakgrundsfärg #ffcc99
+Gröna färgen till texten längst ner: #009900
+Länken ska ändra färg/bakgrundsfärg när man drar muspekaren över den (:hover)
+Du ska använda dig både klasser och id i mallen. */
+
+body {
+    font-family: Candara, Verdana, sans-serif; /* ltu.html siadans default font-familj */
+    margin: 2rem;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: Arial, Helvetica, sans-serif; /* Font-familjen för alla h-taggar */
+}
+.lista {
+    list-style-type: none; /* Gör en lista utan stiltyp, rader har bara texten */
+} 
+/* Lägger till 1 rem (16px) luft i tabbellen mellan text och yttre tabellväggar och 1 px svart ram */
+.tabell1, .tabell2 { 
+    padding: 1rem;
+    border: solid 1px #333;
+}
+tbody tr:first-child td { /* Sätter en halv rem luft i toppen av första radens tabellcell */
+    padding-top: .5rem;
+}
+th { /* Flyttar texten till vänster istället för centrerad samt en ram-linje i botten av tabellhuvudcellen */
+    text-align: left;
+    border-bottom: solid 1px #333;
+}
+caption { /* Flyttar texten till vänster istället för centrerad samt fetat texten */
+    text-align: left;
+    font-weight: 600;
+}
+.tabell1 { /* Sätter en rosaaktig bakgrund */
+    background-color: #ffcccc;
+}
+.tabell1 tr td:first-child { /* Luft till höger om alla raders första tabellcell i Tabell 1  */
+    padding-right: 1rem;
+}
+.tabell2 { /* Sätter en orangeaktig bakgrund */
+    background-color: #ffcc99;
+}
+.foot { /* Alla med classen foot får en gråaktig text med svart bakgrund och snedställd text */
+    color: #aaa;
+    background-color: #000;
+    font-style: italic;
+}
+#source { /* Denna ID-reference har css-egenskaperna högerställld text och grön färg */
+    color: #009900;
+    text-align: right;
+}
+/* a-taggar som ligger med denna ID-reference kontainer 
+får grå bakgrund och vit text vid hover-tillståndet */
+#source a:hover { 
+    color: #fff;
+    background-color: #888;
+}
