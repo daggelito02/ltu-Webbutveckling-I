@@ -6,8 +6,9 @@ body {
     margin: 2rem;
 }
 form {
-    width: 25%;
-    max-width: 12.5rem;
+    width: 100%;
+    max-width: 14rem;
+    max-width: 16.5rem;
 }
 fieldset {
     border: none;
