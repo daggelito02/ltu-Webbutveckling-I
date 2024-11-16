@@ -23,101 +23,103 @@
         mot get-metoden som skickar datat som en parameter i url:en. Med post-metoden 
         kan man skicka typ obegrännsat med data och det över HTTPS protokollet
         vilket gör denna metod säkrare. -->
-            <form action="https://swplayground.ltu.se/resources/parse_form.php" method="post">
-                <div class="form-row">
-                    <!-- Med label-taggen koplar man ihop sin form-tag genom attributet "for"
-                    och id attributet i detta fall input-taggen. -->
-                    <label for="name">Ditt namn</label>
-                    <input type="text" id="name" name="namn">
+            <form class="form-container" action="https://swplayground.ltu.se/resources/parse_form.php" method="post">
+                <div class="column-one">
+                    <div class="form-row">
+                        <!-- Med label-taggen koplar man ihop sin form-tag genom attributet "for"
+                        och id attributet i detta fall input-taggen. -->
+                        <label for="name">Ditt namn</label>
+                        <input type="text" id="name" name="namn">
+                    </div>
+                    <div class="form-row">
+                        <label for="telefon">Telefon</label>
+                        <!-- Här använder jag mig av ett reguljärt uttryck som anger hur formatet på telefonnummret ska se ut
+                            för att vara godkänt. Taktecknet ^ Startar strängmatchningen och första delen (\+46|0) talar om att
+                            man kan börja med antingen +46 eller 0 och bakåtslachen \+ sätter ett undantag så att + tecknet tålkas som
+                            en sträng. Pipe operatorn | betyder eller. [0-9]{9}: Matchar siffror. [0-9] betyder att man kan använda någon
+                            av siffrorna 0 till 9 and {9} betyder att det måste vara 9 siffror. $: dollartecknet stänger att strängmatchningen,
+                            inga mer tecken tillåts.
+                        -->
+                        <input 
+                        type="text" 
+                        id="telefon" 
+                        name="telefon"
+                        pattern="^(\+46|0)[0-9]{9}$" 
+                        placeholder="+46705555555 eller 0705555555"
+                        required>
+                    </div>
+                    <div class="form-row">
+                        <label for="email">Email address:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-row">
+                        <label for="prioritet">Prioritet</label>
+                        <!-- Med formm-taggen select skapar du en dropdown-lista där varje option-tagg
+                        blir de val som finns i listan. Default för en select en "single select" där 
+                        man väljet ett av valen presis som med radio-knappar. Med attributet multiple
+                        får du select-listan att bli flerval. -->
+                        <select name="prioritet" id="prioritet">
+                            <option value="1">Låg</option>
+                            <option value="2">Normal</option>
+                            <option value="3">Hög</option>
+                        </select>
+                    </div> 
+                    <div class="form-row radio">
+                        <fieldset>
+                            <legend>Tilldela till ort</legend>
+                            <!-- Hä kommer en lista med radioknapper. Man håller ihop listan med 
+                            att ange samma namn på namn-attributet -->
+                            <div>
+                                <input type="radio" id="gbg" name="ort" value="gbg">
+                                <label for="gbg">Göteborg</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="sthlm" name="ort" value="sthlm">
+                                <label for="sthlm">Stockholm</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="ume" name="ort" value="ume">
+                                <label for="ume">Umeå</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="lule" name="ort" value="lule">
+                                <label for="lule">Luleå</label>
+                            </div>
+                        </fieldset>
+                    </div>
                 </div>
-                <div class="form-row">
-                    <label for="telefon">Telefon</label>
-                    <!-- Här använder jag mig av ett reguljärt uttryck som anger hur formatet på telefonnummret ska se ut
-                         för att vara godkänt. Taktecknet ^ Startar strängmatchningen och första delen (\+46|0) talar om att
-                         man kan börja med antingen +46 eller 0 och bakåtslachen \+ sätter ett undantag så att + tecknet tålkas som
-                         en sträng. Pipe operatorn | betyder eller. [0-9]{9}: Matchar siffror. [0-9] betyder att man kan använda någon
-                         av siffrorna 0 till 9 and {9} betyder att det måste vara 9 siffror. $: dollartecknet stänger att strängmatchningen,
-                         inga mer tecken tillåts.
-                     -->
-                    <input 
-                    type="text" 
-                    id="telefon" 
-                    name="telefon"
-                    pattern="^(\+46|0)[0-9]{9}$" 
-                    placeholder="+46705555555 eller 0705555555"
-                    required>
+                    <div class="column-two">
+                    <div class="form-row">
+                        <label for="kategori">Kategorin</label>
+                        <select name="kategori" id="kategori">
+                            <option value="fakt">Fakturering</option>
+                            <option value="net">Internet</option>
+                            <option value="tel">Telefoni</option>
+                            <option value="epost">E-post</option>
+                        </select>
+                    </div>
+                    <div class="form-row">
+                        <label for="rubrik">Rubrik</label>
+                        <input type="text" id="rubrik" name="rubrik">
+                    </div>
+                    <div class="form-row">
+                        <!-- Vill man skriva lite längre texter än <input type="text"> elementet använder man sig av textarea-taggen.
+                        Med cols atributet anger man kolumner och med rows atributet anger man rader -->
+                        <label for="beskrivning">Beskrivning</label>
+                        <textarea 
+                            id="beskrivning" 
+                            name="beskrivning"
+                            minlength="20"
+                            required 
+                            placeholder="Minst 25 tecken..."></textarea>
+                    </div> 
+                    <div class="form-row form-buttons">
+                        <!-- Input-typen Submit är själva skickaknappen och reset är en knapp som tömmer 
+                        formuläret men eventuellt data som men fyllt i. -->
+                        <input type="submit" value="Submit" name="skicka">
+                        <input type="reset" value="Reset">
+                    </div> 
                 </div>
-                <div class="form-row">
-                    <label for="email">Email address:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-row">
-                    <label for="prioritet">Prioritet</label>
-                    <!-- Med formm-taggen select skapar du en dropdown-lista där varje option-tagg
-                    blir de val som finns i listan. Default för en select en "single select" där 
-                    man väljet ett av valen presis som med radio-knappar. Med attributet multiple
-                    får du select-listan att bli flerval. -->
-                    <select name="prioritet" id="prioritet">
-                        <option value="1">Låg</option>
-                        <option value="2">Normal</option>
-                        <option value="3">Hög</option>
-                    </select>
-                </div> 
-                <div class="form-row radio">
-                    <fieldset>
-                        <legend>Tilldela till ort</legend>
-                        <!-- Hä kommer en lista med radioknapper. Man håller ihop listan med 
-                        att ange samma namn på namn-attributet -->
-                        <div>
-                            <input type="radio" id="gbg" name="ort" value="gbg">
-                            <label for="gbg">Göteborg</label>
-                        </div>
-                        <div>
-                            <input type="radio" id="sthlm" name="ort" value="sthlm">
-                            <label for="sthlm">Stockholm</label>
-                        </div>
-                        <div>
-                            <input type="radio" id="ume" name="ort" value="ume">
-                            <label for="ume">Umeå</label>
-                        </div>
-                        <div>
-                            <input type="radio" id="lule" name="ort" value="lule">
-                            <label for="lule">Luleå</label>
-                        </div>
-                    </fieldset>
-                </div>
-                <div class="form-row">
-                    <label for="kategori">Kategorin</label>
-                    <select name="kategori" id="kategori">
-                        <option value="fakt">Fakturering</option>
-                        <option value="net">Internet</option>
-                        <option value="tel">Telefoni</option>
-                        <option value="epost">E-post</option>
-                    </select>
-                </div>
-                <div class="form-row">
-                    <label for="rubrik">Rubrik</label>
-                    <input type="text" id="rubrik" name="rubrik">
-                </div>
-                <div class="form-row">
-                    <!-- Vill man skriva lite längre texter än <input type="text"> elementet använder man sig av textarea-taggen.
-                    Med cols atributet anger man kolumner och med rows atributet anger man rader -->
-                    <label for="beskrivning">Beskrivning</label>
-                    <textarea 
-                        id="beskrivning" 
-                        cols="30" 
-                        rows="10" 
-                        name="beskrivning"
-                        minlength="20"
-                        required 
-                        placeholder="Minst 25 tecken..."></textarea>
-                </div> 
-                <div class="form-row">
-                    <!-- Input-typen Submit är själva skickaknappen och reset är en knapp som tömmer 
-                    formuläret men eventuellt data som men fyllt i. -->
-                    <input type="submit" value="Submit" name="skicka">
-                    <input type="reset" value="Reset">
-                </div> 
             </form>
         </main>
 	</body>
