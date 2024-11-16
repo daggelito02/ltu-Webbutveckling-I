@@ -1,5 +1,8 @@
+/* Använder rem och % för bättre skalning vid zoomning av viewpoert */
+
 * {
-    box-sizing: border-box; /*  */
+    box-sizing: border-box; /* för att få elemnt att behålla den storlek 
+                            den är satt till oavsätt margin, paddning border mm */
 }
 body {
     font-family: Arial, Helvetica, sans-serif; /* suportForm.html siadans default font-familj */
@@ -15,7 +18,7 @@ fieldset {
     padding: 0;
 }
 label {
-    display: block; /* Alla textetiketter radbryter  */
+    display: block; /* Alla textetiketter är block och radbryter */
 }
 .form-row {
     margin-bottom: 1rem;
