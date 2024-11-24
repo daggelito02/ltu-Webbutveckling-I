@@ -1,8 +1,8 @@
 @import url("reset.css"); /* importerar Joch Comeaus reset-styles */
 :root {
     /* css variabler */
-    --button-hover-color: color-mix(in srgb, #000 10%, #808000);
-    --button-active-color: color-mix(in srgb, #000 20%, #808000);
+    --button-hover-color: color-mix(in srgb, #000 10%, #000d80);
+    --button-active-color: color-mix(in srgb, #000 20%, #000d80);
 }
 body {
     font-family: Arial, Helvetica, sans-serif; /* ltu.html siadans default font-familj */
@@ -84,9 +84,9 @@ textarea {
 }
 
 /* Lite skojsiga egenskaps-inställningar så att formulär-knapparna ska bli mer levande :-).
-Grundförgen är olivgrön. */
+Grundförgen är mörkblå. */
 .form-buttons input {
-    background-color: #808000;
+    background-color: #000d80;
     color: #fff;
     border: none; 
     padding: 0.625rem 1.25rem;
@@ -99,10 +99,10 @@ Grundförgen är olivgrön. */
   }
   
   /* Anväver en ny css 3 funktion som har stöd i alla senaste vanliga webbläsare 
-  color-mix(). Här vill jag utgå ifrån olivgrön och göra färjen mörkare procentuellt.
+  color-mix(). Här vill jag utgå ifrån mörkblå och göra färjen mörkare procentuellt.
   se variablerna högst upp spesifierad i root elementet*/
   .form-buttons input:hover {
-    background-color: #121200; /* Fallback */
+    background-color: #18005f; /* Fallback */
     /* background-color: var(--button-hover-color); Avmarkerad för att (https://jigsaw.w3.org/css-validator/validator)
     skulle godkänna :-( */
     transform: scale(1.05); 
@@ -114,7 +114,7 @@ Grundförgen är olivgrön. */
   }
   
   .form-buttons input:active {
-    background-color: #666600; /* Fallback */
+    background-color: #17003c; /* Fallback */
     /* background-color: var(--button-active-color); Avmarkerad för att (https://jigsaw.w3.org/css-validator/validator)
     skulle godkänna :-( */
     transform: scale(0.95);

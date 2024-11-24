@@ -1,8 +1,11 @@
+/* Använder rem och % för bättre skalning vid zoomning av viewpoert */
+
 * {
-    box-sizing: border-box;
+    box-sizing: border-box; /* för att få elemnt att behålla den storlek 
+                            den är satt till oavsätt margin, paddning border mm */
 }
 body {
-    font-family: Arial, Helvetica, sans-serif; /* ltu.html siadans default font-familj */
+    font-family: Arial, Helvetica, sans-serif; /* suportForm.html siadans default font-familj */
     margin: 2rem;
 }
 form {
@@ -15,7 +18,7 @@ fieldset {
     padding: 0;
 }
 label {
-    display: block;
+    display: block; /* Alla textetiketter är block och radbryter */
 }
 .form-row {
     margin-bottom: 1rem;
@@ -25,6 +28,6 @@ select {
     width: 100%;
     height: 1.6rem;
 }
-.radio input + label {
-    display: inline;
+.radio input + label { 
+    display: inline; /* Ändrar tillbala så att alla textetiketter ligger på samma rad som radioknapparna  */
 }

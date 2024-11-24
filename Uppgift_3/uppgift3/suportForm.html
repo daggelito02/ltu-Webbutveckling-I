@@ -20,7 +20,8 @@
         <form action="https://swplayground.ltu.se/resources/parse_form.php" method="post">
             <div class="form-row">
                 <!-- Med label-taggen koplar man ihop sin form-tag genom attributet "for"
-                och id attributet i detta fall input-taggen. -->
+                och id attributet i detta fall input-taggen. Det gör bl.a att radioknappen blir vald 
+                vid klick på label-texten. -->
                 <label for="name">Ditt namn</label>
                 <input type="text" id="name" name="namn">
             </div>
@@ -32,7 +33,7 @@
                 <label for="prioritet">Prioritet</label>
                 <!-- Med formm-taggen select skapar du en dropdown-lista där varje option-tagg
                 blir de val som finns i listan. Default för en select en "single select" där 
-                man väljet ett av valen presis som med radio-knappar. Med attributet multiple
+                man väljer ett av valen presis som med radio-knappar. Med attributet multiple
                 får du select-listan att bli flerval. -->
                 <select name="prioritet" id="prioritet">
                     <option value="1">Låg</option>
@@ -43,8 +44,8 @@
             <div class="form-row radio">
                 <fieldset>
                     <legend>Tilldela till ort</legend>
-                    <!-- Hä kommer en lista med radioknapper. Man håller ihop listan med 
-                    att ange samma namn på namn-attributet -->
+                    <!-- Här kommer en lista med radioknapper. Man håller ihop listan med 
+                    att ange samma namn på namn-attributet i detta fall namnet "ort" -->
                     <div>
                         <input type="radio" id="gbg" name="ort" value="gbg">
                         <label for="gbg">Göteborg</label>
@@ -78,7 +79,7 @@
             </div>
             <div class="form-row">
                 <!-- Vill man skriva lite längre texter än <input type="text"> elementet använder man sig av textarea-taggen.
-                Med cols atributet anger man kolumner och med rows atributet anger man rader -->
+                Med cols atributet anger man anta kolumner och med rows atributet anger man antal rader -->
                 <label for="beskrivning">Beskrivning</label>
                 <textarea id="beskrivning" cols="30" rows="10" name="beskrivning"></textarea>
             </div> 
