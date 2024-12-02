@@ -1,0 +1,14 @@
+:root {
+    /* Grid units */
+    --main-aria-pagetype-max-width: 1440px;
+
+
+
+    /* colors */
+    --color-main-background: #fff;
+    --color-base-font: #333;
+    --color-border: #e0e0e0;
+
+    --button-hover-color: color-mix(in srgb, #000 10%, #808000);
+    --button-active-color: color-mix(in srgb, #000 20%, #808000);
+}

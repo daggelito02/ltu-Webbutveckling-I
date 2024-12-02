@@ -1,0 +1,118 @@
+body {
+    font-family: Arial, Helvetica, sans-serif; /* ltu.html siadans default font-familj */
+    font-size: 1rem;
+    display: grid;
+    grid: auto auto auto / 1fr minmax(1px, var(--main-aria-pagetype-max-width)) 1fr;
+    grid-template-areas:
+        "header header header"
+        ". main-content ."
+        "footer footer footer";
+    grid-row-gap: 0;
+    background-color: var(--color-main-background);
+    color: var(--color-base-font);
+}
+/*@media (max-width: 414px) {
+    body {
+        margin: 1rem;  Media query som minskar marginalen på body elementet 
+    }
+}*/
+header{
+    grid-area: header;
+}
+.logo-container {
+    background-color: #ededed;
+}
+.logo-container, .main-content-area, .top-menu-list {
+    padding: 0 2rem;
+}
+.main-content-area{
+    margin: 1rem 0 2rem;
+}
+.top-menu-list {
+    display: flex;
+    list-style-type: none; 
+    margin: 0;
+}
+.top-menu-item:nth-child(4) {
+    margin-left: auto;  /* Skapar utrymme mellan de första tre och de sista två */
+}
+.top-menu-link,
+.top-menu-link:visited {
+    display: inline-flex;
+    text-decoration: none;
+    padding: .6rem .8rem;
+    color: #333;
+    font-weight: 600;
+}
+.top-menu-link:hover {
+    background-color: #ededed;
+    border-bottom: 2px solid #333;
+}
+.top-menu-link.selected,
+.top-menu-link.selected:hover {
+    background-color: #aaa;
+    color: #fff;
+    border-bottom: 2px solid #333;
+}
+.top-menu-link.selected:hover {
+    cursor: auto;
+}
+.top-menu-link:focus {
+    color: #fff;
+    background-color: #cdcdcd;
+}
+main {
+    grid-area: main-content;
+}
+.top-menu, footer {
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+}
+footer {
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+    padding: .5rem 0;
+}
+.footer-section {
+    display: flex;
+    align-items: center;
+}
+h1 {
+    font-size: 2rem;
+    font-weight: 500;
+}
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(332.1px, 1fr)); /* Tre kolumner */
+    gap: 1rem;
+}
+@media (max-width: 1100px) {
+    .news-grid {
+        grid-template-columns: repeat(auto-fit, minmax(309.1px, 1fr)); /* Tre kolumner */
+    }
+}
+article {
+    color: var(--color-base-font);
+    border: #333 solid 1px;
+}
+.footer-text {
+    padding-right: .2rem;
+}
+
+
+
+
+/* 
+.material-symbols-outlined {
+font-size: 1rem;
+position: relative ;
+top: 3px;
+padding-left: 4px;
+background: white;
+right: 5px;
+}
+.material-symbols-outlined.green {
+color:green;
+}
+ */
