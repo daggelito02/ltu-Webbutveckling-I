@@ -10,6 +10,7 @@ body {
     grid-row-gap: 0;
     background-color: var(--color-main-background);
     color: var(--color-base-font);
+    margin-bottom: 2rem;
 }
 /*@media (max-width: 414px) {
     body {
@@ -34,7 +35,7 @@ header{
     margin: 0;
 }
 .top-menu-item:nth-child(4) {
-    margin-left: auto;  /* Skapar utrymme mellan de första tre och de sista två */
+    margin-left: auto;  /* Skapar utrymme mellan de första tre osel de sista två */
 }
 .top-menu-link,
 .top-menu-link:visited {
@@ -50,7 +51,7 @@ header{
 }
 .top-menu-link.selected,
 .top-menu-link.selected:hover {
-    background-color: #aaa;
+    background-color: #757575;
     color: #fff;
     border-bottom: 2px solid #333;
 }
@@ -91,10 +92,6 @@ h1 {
     .news-grid {
         grid-template-columns: repeat(auto-fit, minmax(309.1px, 1fr)); /* Tre kolumner */
     }
-}
-article {
-    color: var(--color-base-font);
-    border: #333 solid 1px;
 }
 .footer-text {
     padding-right: .2rem;
