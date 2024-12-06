@@ -16,11 +16,12 @@
 .news-article-link {
     text-decoration: none;
 }
-.news-article-image img {
+.news-article-image img { /* Höjd och vidd sätts för att det innehållet inte ska röra sig om bild-inladdniingen tar tid*/
     display: block;
     transition: all .3s ease-in-out;
     width: 100%;
     max-height: 56.25%; /* Ihop med width får bilden ett 16/9 ratio */
+    border-radius: 3px;
 }
 .news-article-header {
     transition: all .3s ease-in-out;
@@ -37,4 +38,38 @@
 .news-article-link:hover .news-article-header {
     text-decoration: underline;
     transition: all .3s ease-in-out;
+}
+.news-page-article {
+    max-width: 64rem; /* 1024px */
+    width: 100%;
+} 
+.news-page-article__image {
+    max-width: 80%;
+}
+.news-page-article__image img{
+    border-radius: 2px;
+}
+@media (max-width: 768px) { /* Media query som sätter full bredd stående ipad mini  */
+    .news-page-article__image {
+        max-width: 100%; 
+    }
+}
+.news-page-article__image + h1 {
+    margin-top: 1rem;
+    margin-bottom: .5rem;
+}
+.news-page-article__ingress {
+    font-size: var(--ingress-font-size);
+}
+.news-page-article h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 1rem 0 0 0;
+}
+.news-page-article__divider {
+    height: 2px;
+    background-color: var(--color-border);
+    transform: scaleY(0.5);  
+    transform-origin: center;
+    margin: 2rem 0;
 }
