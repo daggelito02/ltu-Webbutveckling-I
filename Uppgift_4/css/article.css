@@ -79,3 +79,8 @@
     transform-origin: center;
     margin: 2rem 0;
 }
+.news-article-image--about {
+    max-width: 45%;
+    float: inline-end;
+    margin: 0 0 0 2rem;
+}
