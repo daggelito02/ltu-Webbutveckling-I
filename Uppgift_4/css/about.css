@@ -21,7 +21,7 @@
     color: #333;
 }
 .about-address a:hover {
-    background-color: #ededed;
+    background-color: var(--color-link-hover);
 }
 .about-address-title {
     font-weight: 600;

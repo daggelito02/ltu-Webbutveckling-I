@@ -1,0 +1,18 @@
+footer { 
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+}
+footer {
+    grid-area: footer; /* mappar footer kontainern grid rad */
+    display: flex;
+    justify-content: center;
+    padding: .5rem 0;
+}
+.footer-section {
+    display: flex;
+    align-items: center;
+}
+.footer-text {
+    margin: 0;
+    padding-right: .2rem;
+}

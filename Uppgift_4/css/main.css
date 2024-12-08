@@ -1,43 +1,25 @@
+/* Alla var(token) värden hämtas från tokens.css filen */
 body {
-    font-family: Arial, Helvetica, sans-serif; /* ltu.html siadans default font-familj */
-    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif; /* default font-familj */
+    font-size: var(--body-font-size);
     display: grid;
     grid: auto auto auto / 1fr minmax(1px, var(--main-aria-pagetype-max-width)) 1fr;
-    grid-template-areas:
+    grid-template-areas: /* Specifiserar gridens kontainers tre rader och tre kolumner */
         "header header header"
-        ". main-content ."
+        ". main-content ." /* centrerar main innehållet */
         "footer footer footer";
-    grid-row-gap: 0;
     background-color: var(--color-main-background);
     color: var(--color-base-font);
     margin-bottom: 2rem;
 }
 header{
-    grid-area: header;
+    grid-area: header; /* mappar header kontainern grid rad */
 }
 .logo-container {
-    background-color: #fff;
+    background-color: var(--color-main-background);
     margin: 1rem 0;
     display: flex;
     justify-content: center;
-}
-.logo {
-    height: 6rem;
-}
-.logo-container, .main-content-area, .top-menu-list {
-    padding: 0 2rem;
-}
-.main-content-area {
-    margin: 1rem 0 2rem;
-}
-.main-content-area--center {
-    display: flex;
-    justify-content: center;
-}
-.top-menu-list, .breadcrumb-list {
-    display: flex;
-    list-style-type: none; 
-    margin: 0;
 }
 .breadcrumb-list {
     padding: 0;
@@ -47,66 +29,21 @@ header{
 .breadcrumb-item {
     padding-right: .5rem;
 }
-.top-menu-item:nth-child(4) {
-    margin-left: auto;  /* Skapar utrymme mellan de första tre osel de sista två */
-}
-.top-menu-link,
-.top-menu-link:visited {
-    display: inline-flex;
-    text-decoration: none;
-    padding: .6rem .8rem;
-    color: #333;
-    font-weight: 600;
-}
-.top-menu-link:hover {
-    background-color: #ededed;
-    border-bottom: 2px solid #333;
-}
-.top-menu-link.selected,
-.top-menu-link.selected:hover {
-    background-color: #222;
-    color: #fff;
-    border-bottom: 2px solid #aaa;
-}
-.top-menu-link.selected--news {
-    border-bottom: 2px solid #aaa;
-}
-.top-menu-link.selected:hover {
-    cursor: auto;
-}
-.top-menu-link:focus {
-    color: #fff;
-    background-color: #cdcdcd;
-}
 main {
-    grid-area: main-content;
-}
-.top-menu, footer {
-    border-top: 1px solid var(--color-border);
-    border-bottom: 1px solid var(--color-border);
-}
-footer {
-    grid-area: footer;
-    display: flex;
-    justify-content: center;
-    padding: .5rem 0;
-}
-.footer-section {
-    display: flex;
-    align-items: center;
+    grid-area: main-content; /* mappar main kontainern grid rad */
 }
 h1 {
-    font-size: 2rem;
+    font-size: var(--h1-font-size);
     font-weight: 500;
     margin-bottom: .5rem;
 }
 h2 {
-    font-size: 1.5rem;
+    font-size: var(--h2-font-size);
     font-weight: 500;
     margin: .5rem 0 1.5rem;
 }
 h3 {
-    font-size: 1.125rem;
+    font-size: var(--h3-font-size);
     margin-bottom: .2rem;
 }
 p {
@@ -115,6 +52,9 @@ p {
 .ingress {
     font-size: var(--ingress-font-size);
 }
+.italic {
+    font-style: italic;
+}
 .news-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(332.1px, 1fr)); /* Tre kolumner */
@@ -122,13 +62,19 @@ p {
 }
 @media (max-width: 1100px) {
     .news-grid {
-        grid-template-columns: repeat(auto-fit, minmax(309.1px, 1fr)); /* Tre kolumner */
+        grid-template-columns: repeat(auto-fit, minmax(309.1px, 1fr)); /* Blir två kolumner */
     }
 }
 .news-page-content {
     max-width: var(--news-page-content-max-width);
     width: 100%;
 }
-.footer-text {
-    padding-right: .2rem;
+.material-symbols-outlined {
+    font-size: 1rem;
+    position: relative;
+    top: 3px;
+    padding-left: 4px;
+    background: var(--color-main-white);
+    right: 5px;
+    color: var(--color-base-font);
 }

@@ -1,0 +1,53 @@
+.logo {
+    height: 6rem;
+}
+.logo-container, .main-content-area, .top-menu-list {
+    padding: 0 2rem;
+}
+.main-content-area {
+    margin: 1rem 0 2rem;
+}
+.main-content-area--center {
+    display: flex;
+    justify-content: center;
+}
+.top-menu-list, .breadcrumb-list {
+    display: flex;
+    list-style-type: none; 
+    margin: 0;
+}
+.top-menu-item:nth-child(4) {
+    margin-left: auto;  /* Skapar utrymme mellan de första tre osel de sista två */
+}
+.top-menu-link,
+.top-menu-link:visited {
+    display: inline-flex;
+    text-decoration: none;
+    padding: .6rem .8rem;
+    color: var(--color-base-font); 
+    font-weight: 600;
+}
+.top-menu-link:hover {
+    background-color: var(--color-link-hover);
+    border-bottom: 2px solid var(--color-base-font);
+}
+.top-menu-link.selected,
+.top-menu-link.selected:hover {
+    background-color: var(--colo-link-selected-background);
+    color: var(--color-main-white);
+    border-bottom: 2px solid var(--colo-link-border-bottom);
+}
+.top-menu-link.selected--news {
+    border-bottom: 2px solid var(--colo-link-border-bottom);
+}
+.top-menu-link.selected:hover {
+    cursor: auto;
+}
+.top-menu-link:focus {
+    color: var(--color-main-white);
+    background-color: var(--colo-link-focus-background);
+}
+.top-menu { 
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+}

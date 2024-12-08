@@ -1,0 +1,28 @@
+.tip-heading {
+    margin-bottom: .5rem;
+}
+.tip-list {
+    margin: .5rem 1rem 1rem -1.3rem;
+    
+}
+.tip-list li {
+    margin-bottom: .5rem;
+}
+.tip-list-links {
+    list-style-type: none;
+    margin: 1rem 0;
+    padding: 0;
+}
+.tip-list-links li {
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--color-border-black);
+}
+.tip-list-links a {
+    text-decoration: none;
+}
+.tip-list-links a:hover {
+    text-decoration: underline;
+}
+.tip-list-links p {
+    margin-bottom: .5rem;
+}
