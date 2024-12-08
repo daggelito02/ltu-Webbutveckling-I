@@ -73,11 +73,11 @@
     margin: 1rem 0 0 0;
 }
 .news-page-article__divider {
-    height: 2px;
+    height: 1px;
     background-color: var(--color-border);
-    transform: scaleY(0.5);  
+    transform: scaleY(0.5);
     transform-origin: center;
-    margin: 2rem 0;
+    margin: 1.4rem 0 1rem;
 }
 .news-article-image--about {
     max-width: 45%;

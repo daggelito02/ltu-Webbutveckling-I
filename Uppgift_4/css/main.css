@@ -98,6 +98,22 @@ footer {
 h1 {
     font-size: 2rem;
     font-weight: 500;
+    margin-bottom: .5rem;
+}
+h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: .5rem 0 1.5rem;
+}
+h3 {
+    font-size: 1.125rem;
+    margin-bottom: .2rem;
+}
+p {
+    margin: 0 0 1.2rem;
+}
+.ingress {
+    font-size: var(--ingress-font-size);
 }
 .news-grid {
     display: grid;
