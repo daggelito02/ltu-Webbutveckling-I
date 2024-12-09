@@ -103,7 +103,7 @@ p {
     padding-left: .5rem;
 }
 .button-accept {
-    background-color: #007BFF;
+    background-color: var(--color-button-accept);
     color: white;
     border: none;
     padding: 10px 20px;
@@ -113,10 +113,10 @@ p {
 }
 
 .button-accept:hover {
-    background-color: #0056b3;
+    background-color: var(--color-button-accept-hover);
 }
 .accept-cookie-link {
-    color: #fff;
+    color: var(--color-main-white);
     text-decoration: none;
 }
 .accept-cookie-link:hover {

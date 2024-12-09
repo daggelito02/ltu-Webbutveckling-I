@@ -16,3 +16,6 @@ footer {
     margin: 0;
     padding-right: .2rem;
 }
+.footer-section .material-symbols-outlined {
+    top: 1px;
+}
