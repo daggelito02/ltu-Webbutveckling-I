@@ -97,6 +97,11 @@ p {
     display: inline;
 }
 
+.cookie-container .open-new-window {
+    background-color: transparent;
+    color: var(--color-main-white);
+    padding-left: .5rem;
+}
 .button-accept {
     background-color: #007BFF;
     color: white;
@@ -112,4 +117,8 @@ p {
 }
 .accept-cookie-link {
     color: #fff;
+    text-decoration: none;
+}
+.accept-cookie-link:hover {
+    text-decoration: underline;
 }
