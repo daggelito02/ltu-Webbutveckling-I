@@ -26,6 +26,12 @@ header{
     margin-top: .5rem;
     margin-bottom: 1.5rem;
 }
+.breadcrumb-list a:hover {
+    background-color: var(--color-link-hover);
+}
+.breadcrumb-list a:visited {
+    color: var(--color-main-black);
+}
 .breadcrumb-item {
     padding-right: .5rem;
 }
