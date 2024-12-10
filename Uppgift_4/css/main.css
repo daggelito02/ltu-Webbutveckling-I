@@ -65,6 +65,11 @@ p {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(332.1px, 1fr)); /* Tre kolumner */
     gap: 1rem;
+    position: relative;
+    padding-top: 4rem;
+}
+.header-grid {
+    position: absolute;
 }
 @media (max-width: 1100px) {
     .news-grid {

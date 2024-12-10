@@ -15,6 +15,7 @@ footer {
 .footer-text {
     margin: 0;
     padding-right: .2rem;
+    font-size: 1rem;
 }
 .footer-section .material-symbols-outlined {
     top: 0px;
