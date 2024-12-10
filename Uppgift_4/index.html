@@ -5,19 +5,23 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>FejkNews</title>
         <link rel="icon" href="./favicon.png" sizes="48x48" type="image/png">
+        <!-- Importerar googles ikon-bibliotek -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-        <!-- Skip to main content-länk -->
+        <!-- Skip to main content-länk, finns på alla sidor -->
         <a href="#main-content" class="skip-link">Hoppa till huvudinnehåll</a>
         <header>
+            <!-- webbsajtens logga, finns på alla sidor och länkar till index.html -->
             <div class="logo-container">
                 <a href="index.html">
                     <img alt="FejkNews logotype" src="./images/feljnews.png" class="logo">
                 </a>
             </div>
+            <!-- top -->
             <nav class="top-menu">
+                <!-- En knapp med hamburger-meny-ikon för compact view, vinns på alla sidor -->
                 <div class="top-menu-button-container">
                     <button aria-expanded="false" 
                         aria-controls="menu" 
@@ -28,6 +32,7 @@
                         <p id="button-text">Öppna</p>
                     </button>
                 </div>
+                <!-- Meny-länk-panel, finns på alla sidor. Olika style mellan desktopvy och compact view -->
                 <ul class="top-menu-list menu-dropdown">
                     <li class="top-menu-item">
                         <span class="top-menu-link selected">Senaste</span>
@@ -49,6 +54,7 @@
         </header>
         <main id="main-content" class="main-content-area">
             <h1>Senaste</h1>
+            <!-- Nyhets grid, finns änen på huvudsidiona economy och sport -->
             <section class="news-grid">
                 <a href="./articles/lateste/cigarr-cycle.html" class="news-article-link">
                     <article class="news-article">
@@ -227,12 +233,14 @@
             </section>
         </main>
         <footer>
-            <section class="footer-section ">
+            <section class="footer-section">
                 <p class="footer-text">
                     All rättigheter tillhör FejkNews
                 </p>
                 <span class="material-symbols-outlined">copyright</span>
             </section>
+            <!-- kaka som sätts i sju dagar efter att ha klickat på "accept-cookie" knappen, 
+                 se kod i cookie_consent.js filen. finns på alla sidor-->
             <div id="cookie-consent-terms" class="cookie-container">
                <p>
                     Vi spar inget användarda men för GPRs skull behöver du godkänna vår policy! 
