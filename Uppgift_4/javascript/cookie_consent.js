@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Hämtar element och gör till variabler
     const cookieBanner = document.getElementById('cookie-consent-terms');
     const acceptButton = document.getElementById('accept-cookie');
 

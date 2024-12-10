@@ -1,6 +1,8 @@
+/* gömmer compact view knappen för allt över 768px (över stående ipad mini) */
 .top-menu-button-container {
     display: none;
 }
+/* Style för  compact view */
 @media (max-width: 768px) {
     .top-menu-button-container {
         display: block;
@@ -15,26 +17,14 @@
         min-height: 45.1875px;
         max-height: 45.1875px;
     }
-    .top-menu-button .button-text {
+     .top-menu-button #button-text {
         display: inline-block;
         position: relative;
         margin: 0;
         padding-left: 2px;
         top: -6px;
     }
-    .top-menu-button .button-text.open {
-        display: inline-block;
-    }
-    .top-menu-button.selected .button-text.open {
-        display: none;
-    }
-    .top-menu-button .button-text.close {
-        display: none;
-    }
-    .top-menu-button.selected .button-text.close {
-        display: inline-block;
-    }
-    .top-menu-button:hover .button-text {
+    .top-menu-button:hover #button-text {
         text-decoration: underline;
     }
     .top-menu-list{
@@ -75,6 +65,9 @@
     }
     .top-menu-link.selected--news:focus-visible {
         border-bottom: 2px solid transparent;
+    }
+    .top-menu-link.selected--news:hover {
+        border-bottom: 2px solid var(--colo-link-border-bottom);
     }
     .top-menu-link.selected, 
     .top-menu-link.selected:hover {

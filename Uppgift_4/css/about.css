@@ -1,9 +1,8 @@
 .about-image {
     max-width: 45%;
-    float: inline-end;
+    float: inline-end;  /* Så text flyter runt om bilder */
     margin: .1rem 0 0 2rem;
 }
-
 .about-list {
     margin: .5rem 1rem 1rem -1.4rem;
 }

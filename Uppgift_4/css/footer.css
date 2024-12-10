@@ -17,5 +17,6 @@ footer {
     padding-right: .2rem;
 }
 .footer-section .material-symbols-outlined {
-    top: 1px;
+    top: 0px;
+    z-index: -1;
 }

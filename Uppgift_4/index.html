@@ -9,6 +9,8 @@
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
+        <!-- Skip to main content-länk -->
+        <a href="#main-content" class="skip-link">Hoppa till huvudinnehåll</a>
         <header>
             <div class="logo-container">
                 <a href="index.html">
@@ -17,10 +19,13 @@
             </div>
             <nav class="top-menu">
                 <div class="top-menu-button-container">
-                    <button class="top-menu-button" id="menu-toggle">
+                    <button aria-expanded="false" 
+                        aria-controls="menu" 
+                        aria-expanded="false" 
+                        aria-label="Öppna eller stäng menyn"
+                        class="top-menu-button" id="menu-toggle">
                         <span class="material-symbols-outlined menu">menu</span>
-                        <p class="button-text open">Öppna</p>
-                        <p class="button-text close">Stäng</p>
+                        <p id="button-text">Öppna</p>
                     </button>
                 </div>
                 <ul class="top-menu-list menu-dropdown">
@@ -42,7 +47,7 @@
                 </ul>
             </nav>
         </header>
-        <main class="main-content-area">
+        <main id="main-content" class="main-content-area">
             <h1>Senaste</h1>
             <section class="news-grid">
                 <a href="./articles/lateste/cigarr-cycle.html" class="news-article-link">

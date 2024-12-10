@@ -69,6 +69,7 @@ p {
     max-width: var(--news-page-content-max-width);
     width: 100%;
 }
+/* Default styles för googles material ikoner */
 .material-symbols-outlined {
     font-size: 1rem;
     position: relative;
@@ -78,7 +79,7 @@ p {
     right: 5px;
     color: var(--color-base-font);
 }
-
+/* Css för cookie consent */
 .cookie-container {
     position: fixed;
     bottom: 0;
@@ -122,3 +123,23 @@ p {
 .accept-cookie-link:hover {
     text-decoration: underline;
 }
+
+/* Skip länk */
+.skip-link {
+    position: absolute;
+    top: -3rem; /* Gömmer kontainern i default */
+    left: 2rem;
+    background-color: var(--color-main-black);
+    color: var(--color-main-white);
+    padding: .625rem;
+    z-index: 1000;
+    text-decoration: none;
+    border-radius: 0.3125rem;
+    transition: top 0.3s ease;
+  }
+  
+  /* Skip kontainern vid fokus */
+  .skip-link:focus {
+    top: 2rem; 
+    left: 2rem;
+  }
