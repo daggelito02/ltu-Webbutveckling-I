@@ -8,7 +8,7 @@
         display: block;
     }
     .top-menu-button-container {
-        padding-left: 2rem;
+        padding-left: 1.85rem;
     }
     .top-menu-button {
         background-color: var(--color-main-white);
@@ -17,15 +17,13 @@
         min-height: 45.1875px;
         max-height: 45.1875px;
     }
-     .top-menu-button #button-text {
+     .top-menu-button .button-text {
         display: inline-block;
         position: relative;
         margin: 0;
         padding-left: 2px;
         top: -6px;
-    }
-    .top-menu-button:hover #button-text {
-        text-decoration: underline;
+        color: var(--color-main-black);
     }
     .top-menu-list{
         display: none;
@@ -82,5 +80,20 @@
     }
     .top-menu-link.selected--news {
         margin-bottom: 0;
+    }
+    .material-symbols-outlined.home {
+        color: var(--color-main-black)!important;
+        background: var(--color-main-white)!important;
+        text-decoration: none;
+    }
+    /* för att dölja hover under husikonen */
+    .material-symbols-outlined.home:after {
+        content: '';
+        display: block;
+        height: 2px;
+        background: #fff;
+        width: 100%;
+        bottom: 0px;
+        position: absolute;
     }
 }

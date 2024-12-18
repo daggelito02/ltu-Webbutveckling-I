@@ -1,6 +1,6 @@
 // Hämtar element och gör till variabler
 const dropdownToggle = document.getElementById('menu-toggle');
-const buttonText = document.getElementById('button-text');
+const buttonToggle = document.getElementById('button-toggle');
 const dropdownMenu = document.querySelector('.menu-dropdown');
 
 dropdownToggle.addEventListener('click', () => {
@@ -10,5 +10,5 @@ dropdownToggle.addEventListener('click', () => {
   dropdownToggle.setAttribute('aria-expanded', !expanded); // Växla aria-expanded
   
   // Växla text tillhörande knappen
-  buttonText.textContent = expanded ? 'Öppna' : 'Stäng';
+  buttonToggle.textContent = expanded ? 'menu' : 'close';
 });
