@@ -1,16 +1,6 @@
 .logo {
     height: 6rem;
 }
-.logo-container, .main-content-area, .top-menu-list {
-    padding: 0 2rem;
-}
-.main-content-area {
-    margin: 1rem 0 2rem;
-}
-.main-content-area--center {
-    display: flex;
-    justify-content: center;
-}
 .top-menu-list, .breadcrumb-list {
     display: flex;
     list-style-type: none; 

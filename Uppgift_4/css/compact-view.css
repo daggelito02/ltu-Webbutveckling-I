@@ -7,8 +7,15 @@
     .top-menu-button-container {
         display: block;
     }
+    .logo-container, .main-content-area, .top-menu-list {
+        padding: 0 var(--frame-margin-or-padding-upto-768);
+    }
+    .top-menu-item:nth-child(4) {
+        /* För att minus ska fungera framför variablen */
+        margin-left: calc(1rem - 1rem - var(--frame-margin-or-padding-upto-768));
+    }
     .top-menu-button-container {
-        padding-left: 1.85rem;
+        padding-left: calc(var(--frame-margin-or-padding-upto-768) - .55rem);
     }
     .top-menu-button {
         background-color: var(--color-main-white);
@@ -16,6 +23,9 @@
         padding: 0 2px;
         min-height: 45.1875px;
         max-height: 45.1875px;
+        display: block; 
+        width: 100%;
+        text-align: left;
     }
      .top-menu-button .button-text {
         display: inline-block;
@@ -40,9 +50,14 @@
     }
     .top-menu-item {
         border-bottom: 1px solid var(--color-border);
+        /* För att minus ska fungera framför variablen */
+        margin: 0 calc(1rem - 1rem - var(--frame-margin-or-padding-upto-768)); 
+        padding-left: calc(var(--frame-margin-or-padding-upto-768) - 4px);
     }
     .top-menu-item:first-child {
         border-top: 1px solid var(--color-border);
+        padding-left: calc(var(--frame-margin-or-padding-upto-768) - 6px);
+        margin: 0 calc(1rem - 1rem - var(--frame-margin-or-padding-upto-768)); 
     }
     .top-menu-item:last-child {
         border-bottom: none;
@@ -51,8 +66,9 @@
     .top-menu-link:visited  {
         padding-left: 4px;
         padding-right: 4px;
-        padding: 5px;
-        margin: 4px 0;
+        padding: 8px 5px;
+        margin: 0;
+        display: block;
     }
     .top-menu-link.selected, 
     .top-menu-link.selected:hover {
@@ -60,6 +76,15 @@
         color: var(--color-base-font);
         border: none;
         text-decoration: none;
+        border-left: solid 3px #333;
+        display: block;
+        margin: 0 calc(1.25rem - 1rem - var(--frame-margin-or-padding-upto-768)); 
+        padding-left: calc(var(--frame-margin-or-padding-upto-768) - 2px);
+    }
+    .top-menu-item:first-child .top-menu-link.selected, 
+    .top-menu-item:first-child .top-menu-link.selected:hover {
+        margin: 0 calc(1.375rem - 1rem - var(--frame-margin-or-padding-upto-768)); 
+        padding-left: calc(var(--frame-margin-or-padding-upto-768) - 10px);
     }
     .top-menu-link.selected--news:focus-visible {
         border-bottom: 2px solid transparent;
@@ -67,10 +92,6 @@
     .top-menu-link.selected--news:hover {
         border-bottom: 2px solid var(--colo-link-border-bottom);
     }
-    .top-menu-link.selected, 
-    .top-menu-link.selected:hover {
-        border-left: solid 3px #333;
-    }   
     .top-menu-link:hover, 
     .top-menu-link:focus {
         background-color: var(--color-main-background);
@@ -86,6 +107,10 @@
         background: var(--color-main-white)!important;
         text-decoration: none;
     }
+    .selected .material-symbols-outlined.home {
+        top: 3px;
+        left: 0px;
+    }
     /* för att dölja hover under husikonen */
     .material-symbols-outlined.home:after {
         content: '';
@@ -95,5 +120,38 @@
         width: 100%;
         bottom: 0px;
         position: absolute;
+    }
+}
+@media (max-width: 390px) {
+    .logo-container, .main-content-area, .top-menu-list {
+        padding: 0 var(--frame-margin-or-padding-upto-390);
+    }
+    .top-menu-item:first-child {
+        border-top: 1px solid var(--color-border);
+        padding-left: calc(var(--frame-margin-or-padding-upto-390) - 4px);
+        margin: 0 calc(.9rem - 1rem - var(--frame-margin-or-padding-upto-390)); 
+    }
+    .top-menu-item:first-child .top-menu-link.selected, 
+    .top-menu-item:first-child .top-menu-link.selected:hover {
+        margin: 0 calc(22px - 1rem - var(--frame-margin-or-padding-upto-390)); 
+        padding-left: calc(var(--frame-margin-or-padding-upto-390) - 10px);
+    }
+    .top-menu-item:nth-child(4) {
+        /* För att minus ska fungera framför variablen */
+        margin-left: calc(1rem - 1rem - var(--frame-margin-or-padding-upto-390));
+    }
+    .top-menu-button-container {
+        padding-left: calc(var(--frame-margin-or-padding-upto-390) - .55rem);
+    }
+    .top-menu-item {
+        border-bottom: 1px solid var(--color-border);
+        /* För att minus ska fungera framför variablen */
+        margin: 0 calc(1rem - 1rem - var(--frame-margin-or-padding-upto-390)); 
+        padding-left: calc(var(--frame-margin-or-padding-upto-390) - 4px);
+    }
+    .top-menu-link.selected, 
+    .top-menu-link.selected:hover {
+        margin: 0 calc(1.25rem - 1rem - var(--frame-margin-or-padding-upto-390));
+        padding-left: calc(var(--frame-margin-or-padding-upto-390) - 2px);
     }
 }

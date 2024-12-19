@@ -21,6 +21,16 @@ header{
     display: flex;
     justify-content: center;
 }
+.logo-container, .main-content-area, .top-menu-list {
+    padding: 0 2rem;
+}
+.main-content-area {
+    margin: 1rem 0 2rem;
+}
+.main-content-area--center {
+    display: flex;
+    justify-content: center;
+}
 .breadcrumb-list {
     padding: 0;
     margin-top: .5rem;
