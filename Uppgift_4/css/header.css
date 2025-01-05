@@ -9,9 +9,6 @@
 .top-menu-item:nth-child(4) {
     margin-left: auto;  /* Skapar utrymme mellan de första tre osel de sista två */
 }
-/* .top-menu-link .level2indicator .hide {
- display: none;
-} */
 .top-menu-link,
 .top-menu-link:visited {
     display: inline-flex;

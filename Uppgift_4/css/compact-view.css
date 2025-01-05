@@ -62,12 +62,6 @@
     .top-menu-item:last-child {
         border-bottom: none;
     }
-    .top-menu-link .hide {
-        display: none;
-    }
-    .top-menu-link .level2indicator .hide {
-        display: inline;
-    }
     .top-menu-link,
     .top-menu-link:visited  {
         padding: 8px 5px;
@@ -182,10 +176,6 @@
         margin: 0 calc(1.25rem - 1rem - var(--frame-margin-or-padding-upto-390));
         padding-left: calc(var(--frame-margin-or-padding-upto-390) - 2px);
     }
-    /* .top-menu-link.selected--news .material-symbols-outlined.home {
-        top: -2px;
-        left: -8px;
-    } */
     .selected .material-symbols-outlined.home {
         left: 8px;
     }
