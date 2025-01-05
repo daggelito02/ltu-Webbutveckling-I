@@ -9,9 +9,9 @@
 .top-menu-item:nth-child(4) {
     margin-left: auto;  /* Skapar utrymme mellan de första tre osel de sista två */
 }
-.top-menu-link .level2indicator .hide {
+/* .top-menu-link .level2indicator .hide {
  display: none;
-}
+} */
 .top-menu-link,
 .top-menu-link:visited {
     display: inline-flex;
@@ -19,6 +19,7 @@
     padding: .6rem .8rem;
     color: var(--color-base-font); 
     font-weight: 600;
+    position: relative;
 }
 .top-menu-link:hover {
     background-color: var(--color-link-hover);
@@ -44,12 +45,19 @@
     border-top: 1px solid var(--color-border);
     border-bottom: 1px solid var(--color-border);
 }
+.top-menu-text { 
+    padding-left: 1.3rem;
+    position: relative;
+    z-index: 1;
+}
 .material-symbols-outlined.home {
     color: var(--colo-link-selected-background);
     background: var(--color-main-white);
     font-size: 1.3rem;
-    position: relative;
-    top: 1px;
+    position: absolute;
+    top: 10px;
+    left:4px;
+    z-index: 0;
 }
 .top-menu-link:hover .material-symbols-outlined.home {
     color: var(--color-main-black);
@@ -62,9 +70,9 @@
 .selected .material-symbols-outlined.home {
     color: var(--color-main-white);
     background: var(--colo-link-selected-background);
-    font-size: 1.3rem;
+    /* font-size: 1.3rem;
     position: relative;
-    top: 1px;
+    top: 1px; */
 }
 .top-menu-link.selected:hover .material-symbols-outlined.home {
     color: var(--color-main-white);

@@ -121,15 +121,22 @@
         margin-bottom: 0;
         border: none;
     }
+    .top-menu-text { 
+        padding-left: 1.8rem;
+    }
     .material-symbols-outlined.home {
         color: var(--color-main-black)!important;
         background: var(--color-main-white)!important;
         text-decoration: none;
-        top: 3px;
-        left: 0px;
+        top: 8px;
+        left: 5px;
     }
     .selected .material-symbols-outlined.home {
-        top: 3px;
+        top: 8px;
+        left: 15px;
+    }
+    .top-menu-link.selected--news .material-symbols-outlined.home {
+        top: -2px;
         left: 0px;
     }
     /* för att dölja hover under husikonen */
@@ -154,8 +161,8 @@
     }
     .top-menu-item:first-child .top-menu-link.selected, 
     .top-menu-item:first-child .top-menu-link.selected:hover {
-        margin: 0 calc(25px - 1rem - var(--frame-margin-or-padding-upto-390)); 
-        padding-left: calc(var(--frame-margin-or-padding-upto-390) - 10px);
+        margin: 0 calc(26.5px - 1rem - var(--frame-margin-or-padding-upto-390)); 
+        padding-left: calc(var(--frame-margin-or-padding-upto-390) - 5px);
     }
     .top-menu-item:nth-child(4) {
         /* För att minus ska fungera framför variablen */
@@ -174,5 +181,12 @@
     .top-menu-link.selected:hover {
         margin: 0 calc(1.25rem - 1rem - var(--frame-margin-or-padding-upto-390));
         padding-left: calc(var(--frame-margin-or-padding-upto-390) - 2px);
+    }
+    /* .top-menu-link.selected--news .material-symbols-outlined.home {
+        top: -2px;
+        left: -8px;
+    } */
+    .selected .material-symbols-outlined.home {
+        left: 8px;
     }
 }
