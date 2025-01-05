@@ -62,6 +62,12 @@
     .top-menu-item:last-child {
         border-bottom: none;
     }
+    .top-menu-link .hide {
+        display: none;
+    }
+    .top-menu-link .level2indicator .hide {
+        display: inline;
+    }
     .top-menu-link,
     .top-menu-link:visited  {
         padding: 8px 5px;
@@ -103,9 +109,6 @@
     }
     .top-menu-link.selected--news:focus-visible .level2indicator {
         border-bottom: 2px solid transparent;
-    }
-    .top-menu-link.selected--news:hover .level2indicator {
-        border-bottom: 2px solid var(--colo-link-border-bottom);
     }
     .top-menu-link:hover, 
     .top-menu-link:focus {

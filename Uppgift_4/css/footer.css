@@ -18,6 +18,7 @@ footer {
     font-size: 1rem;
 }
 .footer-section .material-symbols-outlined {
-    top: 0px;
+    top: 3px;
+    left: 0px;
     z-index: -1;
 }
